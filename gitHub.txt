@@ -1,0 +1,6 @@
+Command	Meaning
+git status	Check changes
+git add .	Stage all changes
+git commit	Save changes locally
+git push	Upload changes to GitHub
+git pull	Download latest changes
