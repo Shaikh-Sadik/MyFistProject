@@ -1,0 +1,130 @@
+Great! Now let's learn how to create and manage **branches in Git**.
+
+## **1. What is a branch?**
+
+A branch is a separate line of development where you can make changes without directly affecting the main branch.
+
+For example:
+
+- `main` – Your stable project code.
+- `development` – Code currently under development.
+- `feature-login` – Code related to the login feature.
+
+[Using main, dev, feature branches - Andy Beet](https://images.openai.com/static-rsc-4/p0sCSwZpgLc8fDDNUmY-3_aQbF4QEHyTXQ9iY0yIEky38BEWsE3mb_DYrqD3xgQajV3wo1ng7k4Hn1fvSen5nR4ZriH0i-vzv0TvOiZj1Y_7mAWBqOgOUEGa_LsPpuJxFnWjpelfYzc8kjQT7TsRudOHV182sYGLOBIWxxG4Qsk?purpose=inline)
+
+[andybeet.com](https://andybeet.com/posts/2024/07/maindevfeature/?utm_source=chatgpt.com)
+
+## **2. Create a new branch**
+
+First, open Git Bash inside your project folder.
+
+**Step 1: Check existing branches**
+
+```
+git branch
+```
+
+**Step 2: Create a new branch**
+
+Let's create a branch named `development`.
+
+```
+git branch development
+```
+
+**Step 3: Switch to the new branch**
+
+```
+git switch development
+```
+
+**Step 4: Verify your current branch**
+
+```
+git branch
+```
+
+Expected output:
+
+```
+* development
+  main
+```
+
+The `*` indicates your current branch.
+
+## **3. Create and switch in one command**
+
+Instead of executing two commands, you can use:
+
+```
+git switch -c feature-login
+```
+
+This command creates the `feature-login` branch and switches to it.
+
+## **4. Push your branch to GitHub**
+
+Creating a branch locally does not automatically create it on GitHub.
+
+Execute:
+
+```
+git push -u origin feature-login
+```
+
+Now your branch will also appear on GitHub.
+
+## **5. Important branch commands**
+
+| Command                          | Purpose                        |
+| -------------------------------- | ------------------------------ |
+| `git branch`                     | Show local branches            |
+| `git branch development`         | Create a branch                |
+| `git switch development`         | Switch branch                  |
+| `git switch -c feature-login`    | Create and switch              |
+| `git push -u origin development` | Push branch to GitHub          |
+| `git branch -d development`      | Delete local branch            |
+| `git branch -a`                  | Show local and remote branches |
+
+## **6. Practical workflow**
+
+**main**
+
+Stable code
+
+**development**
+
+Development work
+
+**feature-login**
+
+Login feature
+
+## **7. Your practical task**
+
+Execute these commands one by one:
+
+```
+git switch main
+
+git switch -c development
+
+git switch -c feature-login
+
+git branch
+
+git push -u origin development
+
+git push -u origin feature-login
+```
+
+After executing, you should have three branches:
+
+- main
+- development
+- feature-login
+
+**One important concept to learn next:** `git merge` – it allows you to combine changes from one branch into another.
+
+I recommend learning `merge`, `pull`, and `push` together because these are essential in real-world .NET development teams.
